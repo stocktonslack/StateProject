@@ -24,21 +24,20 @@
         android:hint="name" />
 
     <EditText
-        android:id="@+id/actionTextField"
+        android:id="@+id/objectTextField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/nameTextField"
-        android:layout_below="@+id/nameTextField"
-        android:layout_marginTop="21dp"
+        android:layout_alignLeft="@+id/phraseTextField"
+        android:layout_below="@+id/phraseTextField"
         android:ems="10"
-        android:hint="action" />
+        android:hint="object" />
 
     <EditText
         android:id="@+id/phraseTextField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/actionTextField"
-        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/nameTextField"
+        android:layout_below="@+id/nameTextField"
         android:ems="10"
         android:hint="phrase" >
 
@@ -46,13 +45,12 @@
     </EditText>
 
     <EditText
-        android:id="@+id/blatherTextField"
+        android:id="@+id/actionTextField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/phraseTextField"
-        android:layout_below="@+id/phraseTextField"
-        android:layout_marginTop="26dp"
+        android:layout_alignLeft="@+id/objectTextField"
+        android:layout_centerVertical="true"
         android:ems="10"
-        android:hint="blather" />
+        android:hint="action" />
 
 </RelativeLayout>

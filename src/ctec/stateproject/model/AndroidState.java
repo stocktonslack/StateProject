@@ -4,14 +4,14 @@ import android.app.Application;
 
 public class AndroidState extends Application
 {
-	private String name, age, phrase, blather, action;
+	private String name, age, phrase, object, action;
 	
 	public void onCreate()
 	{
 		name = "";
 		age = "";
 		phrase = "";
-		blather = "";
+		object = "";
 	}
 
 	public String getName()
@@ -34,9 +34,9 @@ public class AndroidState extends Application
 		return phrase;
 	}
 
-	public String getBlather()
+	public String getObject()
 	{
-		return blather;
+		return object;
 	}
 
 	public void setName(String name)
@@ -54,9 +54,9 @@ public class AndroidState extends Application
 		this.phrase = phrase;
 	}
 
-	public void setBlather(String blather)
+	public void setObject(String blather)
 	{
-		this.blather = blather;
+		this.object = object;
 	}
 	
 	public void setAction(String action)

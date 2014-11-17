@@ -14,9 +14,24 @@ import android.widget.TextView;
 
 public class DisplayActivity extends Activity
 {
+	/**
+	 * The text for the second screen
+	 */
 	private TextView displayView;
+	
+	/**
+	 * Button to return Home
+	 */
 	private Button homeButton2;
+	
+	/**
+	 * The State to transfer the info across the screen
+	 */
 	private AndroidState appState;
+	
+	/**
+	 * The list full of different adjectives
+	 */
 	private ArrayList <String> adjectiveList;
 	
 	@Override
@@ -30,22 +45,37 @@ public class DisplayActivity extends Activity
 		appState = (AndroidState) this.getApplication();
 		adjectiveList = new ArrayList <String>();
 		
+		fillTheAdjectiveList();
+		
 		showTransferInput();
 				
 		setupListeners();
 		
-		fillTheAdjectiveList();
+		
 	}
 	
 	private void fillTheAdjectiveList()
 	{
+		adjectiveList.add("studly");
+		adjectiveList.add("muscularly");
+		adjectiveList.add("happily");
+		adjectiveList.add("greatly");
+		adjectiveList.add("quick-wittedly");
+		adjectiveList.add("slowly");
+		adjectiveList.add("floppily");
+		adjectiveList.add("fluidly");
+		adjectiveList.add("smashingly");
+		adjectiveList.add("fancily");
+		adjectiveList.add("foolishly");
 		
 	}
 	
 	private void showTransferInput()
 	{
-		displayView.setText(appState.getName() + " says: " + appState.getPhrase() + " because they " + appState.getBlather()
-												+ " and they are " + appState.getAction());
+		int randomIndex = (int) (Math.random()* adjectiveList.size());
+		
+		displayView.setText(appState.getName() + " says: " + appState.getPhrase() + " because they " 
+						+ appState.getObject() + " and they are " + appState.getAction()+ " " + adjectiveList.get(randomIndex));
 		
 	}
 	
@@ -55,7 +85,7 @@ public class DisplayActivity extends Activity
 		{
 			
 			@Override
-			public void onClick(View v)
+			public void onClick(View currentview)
 			{
 				Intent returnIntent = new Intent ();
 				setResult(RESULT_OK, returnIntent);

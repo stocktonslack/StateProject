@@ -25,7 +25,7 @@ public class InputActivity extends Activity
 		actionField = (EditText) findViewById(R.id.actionTextField);
 		nameField = (EditText) findViewById(R.id.nameTextField);
 		phraseField = (EditText) findViewById(R.id.phraseTextField);
-		blatherField = (EditText) findViewById(R.id.blatherTextField);
+		blatherField = (EditText) findViewById(R.id.objectTextField);
 		transferButton = (Button) findViewById(R.id.transferButton);
 		
 		appState = (AndroidState) this.getApplication();
@@ -55,7 +55,7 @@ public class InputActivity extends Activity
 	{
 		appState.setName(nameField.getText().toString());
 		appState.setPhrase(phraseField.getText().toString());
-		appState.setBlather(blatherField.getText().toString());
+		appState.setObject(blatherField.getText().toString());
 		appState.setAction(actionField.getText().toString());
 	}
 }
