@@ -271,8 +271,8 @@ int id nameTextField 0x7f05003f
 int id never 0x7f050009
 int id none 0x7f050010
 int id normal 0x7f050000
-int id objectTextField 0x7f050041
-int id phraseTextField 0x7f050040
+int id objectTextField 0x7f050040
+int id phraseTextField 0x7f050041
 int id progress_circular 0x7f050018
 int id progress_horizontal 0x7f050019
 int id radio 0x7f05002f
